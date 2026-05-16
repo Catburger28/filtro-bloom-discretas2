@@ -11,7 +11,7 @@ class FiltroBloom:
         self.m = m
         self.n = n
         
-        # 1. Determinación del k óptimo (Criterio matemático de la clase)
+        # 1. Determinación del k óptimo
         # La fórmula es k = (m/n) * ln(2)
         k_teorico = (m / n) * math.log(2)
         self.k = max(1, round(k_teorico)) 
