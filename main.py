@@ -1,3 +1,6 @@
+# Sebastian Cuartas Tenorio 2551342-2724
+# Mauricio Cuartas Tenorio 2357858-2724
+
 import math
 import hashlib
 
@@ -20,7 +23,7 @@ class FiltroBloom:
         self.bit_array = [0] * m
 
     def _obtener_indices(self, elemento):
-        """Genera 'k' índices hash para el elemento."""
+        """Genera 'k' indices hash para el elemento."""
         indices = []
         for i in range(self.k):
             elemento_modificado = f"{elemento}_{i}".encode('utf-8')
@@ -63,7 +66,7 @@ def simulacion_cargas():
         for i in range(n):
             filtro.insertar(f"usuario_valido_{i}")
             
-        # Simulación: Consultar elementos que sabemos que NO están para forzar falsos positivos
+        # Simulacion: Consultar elementos que sabemos que NO están para forzar falsos positivos
         falsos_positivos_detectados = 0
         for i in range(consultas_falsas):
             if filtro.verificar(f"hacker_invalido_{i}"):
